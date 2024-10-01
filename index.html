@@ -4,50 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Shen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo"><h1>Welcome to my website</h1></div>
+      <p id="welcome">Welcome to my portfolio</p>
       
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Welcome</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        
-      </div>
-    </nav>
+    
+      
+    
     <section id="profile">
       <div class="section__pic-container">
-        <img src="feitan.png" alt="John Doe profile picture" />
+        <img src="feitan.png" alt="profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">shenn</h1>
-        <p class="section__text__p2">Hi, I make discord bot and Travis Scott is on top!!!</p>
-        <p class="section__text__p2">Discord: shenn.</p>
+        <p class="section__text__p2">Praise God.</p>
+        <p class="section__text__p2">Isaiah 41:10 👑</p><br>
         <div class="btn-container">
           
       
         </div>
-        
+        <p>
+          My socials:
+        </p>
         <div id="socials-container">
+          
           <img 
             src="discordblack.png"
             alt="My discord"
             title="shenn."
+            onclick="copyText()"
 
             class="discord">
-
-          <a href="https://www.github.com/5shenn"><img
+            <p id="discord" style="display: none;" >shenn.</p>
+          <a href="https://www.github.com/5shenn"
+          target="_blank">
+            <img
             src="github.png"
             alt="My Github profile"
             
@@ -56,17 +54,58 @@
             rel="noopener">
           </a>
           
-          <a href="https://www.instagram.com/shenlorem?igsh=MWcxeGFzcnYzaWI2ZQ%3D%3D&utm_source=qr"><img
-            src="instagramblack.png"
+          <a href="https://www.instagram.com/shenlorem/" 
+          target="_blank">
+            <img src="instagramblack.png"
             alt="My instagram profile"
-            class="icon"
-            target="_blank">
-          </a>
-          <a href="https://www.roblox.com/users/664208156/profile">
-            <img src="robloxblack.png"
-            alt="My roblox profile"
             class="icon">
           </a>
+
+
+          <a href="https://x.com/ZiggiePuf" 
+          target="_blank">
+            <img src="twitter.png"
+            alt="Twitter profile"
+            class="icon">
+          </a>
+        </div><br><hr style="color: black; width: 220px; margin: 0 auto"><br>
+        <p>
+          Games I play:
+        </p>
+        <a href="https://www.roblox.com/users/664208156/profile" 
+          target="_blank">
+            <img src="robloxblack.png"
+            alt="Roblox profile"
+            class="icon_games">
+          </a>
+
+          <a href="https://www.xbox.com/en-US/play/user/shenn8982" 
+          target="_blank">
+            <img src="minecraft.png"
+            alt="Xbox profile"
+            class="icon_games">
+          </a>
+
+          <a href="https://steamcommunity.com/profiles/76561199565613960/" 
+          target="_blank">
+            <img src="cs2.png"
+            alt="Steam profile"
+            class="icon_games">
+          </a>
+
+          
+
+          <a href="https://tracker.gg/valorant/profile/riot/maxrc%23lorem/overview" 
+          target="_blank">
+            <img src="valorant.webp"
+            alt="Valorant profile"
+            class="icon_games">
+          </a>
+      </div><br><br><br><br><br><br><br><br>
+        <footer>Stay safe, God bless you!<br>Edited by shenn.</footer>
+
+
+        
     <script src="script.js"></script>
   </body>
 </html>
