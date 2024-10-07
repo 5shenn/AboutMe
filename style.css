@@ -197,6 +197,9 @@ section {
     gap: 1.2rem;
   
 }
+#audio{
+  visibility: hidden;
+}
 
 /* ICONS */
 .discord {
@@ -205,6 +208,13 @@ section {
 }
 .discord:hover {
   transform: translateY(-2.7px);
+  cursor: pointer;
+}
+#play_button{
+  display: inline;
+  width: 50px;
+  padding-left: 10px;
+  padding-top: 10px;
   cursor: pointer;
 }
 .icon {

@@ -16,3 +16,23 @@ function toggleMenu() {
         console.error('Error copying text: ', err);
     });
 }
+
+var song = document.getElementById('audio');
+var play = document.getElementById('play_button');
+var count = 0;
+
+function playPause(){
+    if(count == 0){
+        count = 1;
+        audio.pause();
+        var imgElement = document.getElementById("play_button");
+    imgElement.src = "pause.png";
+
+    }else{
+        count = 0;
+        audio.play();
+        var imgElement = document.getElementById("play_button");
+    imgElement.src = "play.png";
+    }
+}
+ 
