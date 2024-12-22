@@ -15,6 +15,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Wrapper */
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
 /* Sidebar */
 .sidebar {
     background-color: #2c3e50; /* Charcoal Gray */
@@ -36,11 +43,14 @@ body {
     left: 0;
 }
 
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .sidebar-header h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 3rem;
-    text-align: center;
     color: #1abc9c; /* Teal */
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -148,18 +158,6 @@ body {
 }
 
 .skill-card {
-    background-color: #3b4b54; /* Darker Slate */
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    padding: 35px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Skill Card with Softer Green and Mint Linear Gradient */
-.skill-card {
     background: linear-gradient(45deg, #27ae60, #16a085); /* Softer Green to Mint Gradient */
     padding: 35px;
     border-radius: 12px;
@@ -173,62 +171,72 @@ body {
     color: #bdc3c7;
 }
 
-.skill-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #1abc9c, #16a085); /* Emerald Teal Gradient */
-    opacity: 0.15;
-    transition: opacity 0.3s ease;
-}
-
 .skill-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
 }
 
-.skill-card:hover::before {
-    opacity: 0.3;
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Contact Links */
-.contact a {
-    color: #16a085; /* Emerald Green */
-    text-decoration: none;
-    font-weight: 600;
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
     font-size: 1.2rem;
+    color: #bdc3c7;
+    margin-bottom: 8px;
 }
 
-.contact a:hover {
-    text-decoration: underline;
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #16a085;
+    border-radius: 8px;
+    background-color: #2c3e50;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
 }
 
-/* Responsive Design */
+input:focus, textarea:focus {
+    border-color: #1abc9c;
+}
+
+.cta-button {
+    padding: 12px 20px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #16a085;
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .menu-toggle {
-        font-size: 2rem;
+    .wrapper {
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 250px;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 
     .main {
-        padding: 20px;
-    }
-
-    .topbar {
-        padding: 20px;
-    }
-
-    .section {
-        padding: 30px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
+        margin-left: 0;
     }
 }
