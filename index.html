@@ -35,15 +35,15 @@
 								<h1>Hiloo. I'm <strong>Shen</strong>.</h1>
 							</header>
             </div>
-			<p><strong>I play valorant most of the time and I LOVE GOD.✝️ <br>
+			<p><strong>⋆. ୨୧˚⋆  I play valorant most of the time and I LOVE GOD.✝️ <br>
 
-				17 (18 this june)<br>
+				⋆. ୨୧˚⋆  17 (18 this june)<br>
 		
-				Birthday: June 12th <br>
+				⋆. ୨୧˚⋆  Birthday: June 12th <br>
 				
 				
-				Be grateful of what God has done for you. <br>
-				🇰🇭</strong></p><br>
+				⋆. ୨୧˚⋆  Be grateful of what God has done for you. <br>
+				🇰🇭 <br>˗ˏˋ ♡ ˎˊ˗</strong></p><br>
 				
 				
 							
@@ -102,7 +102,7 @@
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/valorant.png" alt="" /></a>
 								<h3><a href="#">Valorant</a></h3>
-								<p>Most of the time I play this.</p>
+								<p>I play it most of the time.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -114,21 +114,30 @@
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="https://steamcommunity.com/profiles/76561199565613960/" target="_blank" class="image featured"><img src="images/cs2.jpg" alt="" /></a>
-								<h3><a href="#">Counter Strike 2</a></h3>
-								<p>I play it when I'm bored of valorant.</p>
+								
+									<a href="#" class="image featured" title="2877327964" onclick="copyText(event)">
+										<img src="images/fragpunk.jpg" alt="Fragpunk Image" />
+									</a>
+								
+								<h3>
+									<a href="#" title="2877327964" class="tooltip" onclick="copyText(event)">
+										Fragpunk
+										<span class="tooltiptext"></span>
+									</a>
+								</h3>
+								<p>Click the image or text to copy my ID</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="https://osu.ppy.sh/users/23255890" target="_blank" class="image featured"><img src="images/Osu!_Logo_2016.svg.png" alt="" /></a>
-								<h3><a href="#">Osu</a></h3>
+								<h3><a href="https://osu.ppy.sh/users/23255890">Osu</a></h3>
 								<p>I RARELY play it now, (still a noob).</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/minecraft.jpg" alt="" /></a>
+								<a href="https://www.xbox.com/en-US/play/user/shenn8982" class="image featured"><img src="images/minecraft.jpg" alt="" /></a>
 								<h3><a href="https://www.xbox.com/en-US/play/user/shenn8982">Minecraft</a></h3>
 								<p>Only play when I have friends to play with.</p>
 							</article>
@@ -183,7 +192,7 @@
 							
 								<li><a href="https://www.instagram.com/shenlorem/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="https://www.tiktok.com/@keniishtm" target="_blank" class="icon brands fa-tiktok"><span class="label">Tiktok</span></a></li>
-								<footer>hi zaza <3 </footer>
+								
 							</ul>
 							
 						</div>
@@ -199,6 +208,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function copyText(event) {
+					event.preventDefault(); // Prevent default link action
+			
+					// Get the title attribute value (the number you want to copy)
+					const textToCopy = event.currentTarget.getAttribute("title");
+			
+					// Create a temporary text area to copy text
+					const tempInput = document.createElement("textarea");
+					tempInput.value = textToCopy;
+					document.body.appendChild(tempInput);
+					tempInput.select();
+					document.execCommand("copy");
+					document.body.removeChild(tempInput);
+			
+					alert('Copied: ' + textToCopy);
+				}
+			</script>
 
 	</body>
 </html>
