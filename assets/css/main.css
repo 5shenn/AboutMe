@@ -124,7 +124,7 @@ input, select, textarea {
 
 	b, strong {
 		font-weight: 600;
-		color: #3e3e3e;
+		color: #cfcfcf;
 	}
 
 	i, em {
@@ -211,6 +211,7 @@ input, select, textarea {
 		header > p {
 			font-size: 1.25em;
 			margin: 0;
+			
 		}
 
 	footer {
@@ -1919,25 +1920,240 @@ input, select, textarea {
 		padding: 2em;
 	}
 
-		.box.style1 {
-			padding: 3em 2em 3.5em 2em;
-		}
+	#work {
+		padding: 8em 0;
+		background: linear-gradient(135deg, #1c1c1c, #2e2e2e, #62fa6a);
+		color: #fdfdfd;
+		box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+		position: relative;
+		overflow: hidden;
+		margin-top: 0; /* Remove margin to ensure no gap */
+	}
+	
+	#work::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.06), transparent 60%);
+		pointer-events: none;
+		z-index: 0;
+	}
+	
+	/* Bring all content to front */
+	#work .container,
+	#work .row,
+	#work .box.style1 {
+		position: relative;
+		z-index: 1;
+	}
+	
+	#work header {
+		margin: 0; /* Remove any margin in header */
+		padding-bottom: 0.5em; /* Add a little space between header and verses */
+	}
+	
+	/* Header Styling */
+	#work header h2 {
+		font-size: 2.35em;
+		font-weight: 700;
+		color: #62fa6a; 
+		background: linear-gradient(90deg, rgb(0, 0, 0), #62fa6a, rgb(0, 0, 0));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
+		margin-bottom: 0.3em;
+	}
+	
+	#work header p {
+		font-size: 1.4em;
+		color: #ccc;
+		margin-bottom: 2em;
+	}
+	
+	/* Box (each Bible verse) */
+	#work .box.style1 {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 1.5em;
+		padding: 2.5em;
+		box-shadow: 0 0 40px rgba(255, 215, 0, 0.05);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		backdrop-filter: blur(8px);
+	}
+	
+	#work .box.style1:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 15px 60px rgba(255, 215, 0, 0.1);
+	}
+	
+	#work .box.style1 h3 {
+		color: #62fa6a;
+		font-size: 1.6em;
+		margin-bottom: 0.6em;
+	}
+	
+	#work .box.style1 p {
+		color: #eaeaea;
+		font-size: 1.2em;
+		line-height: 1.8em;
+	}
+	
+	/* Footer Styling */
+	#work footer p {
+		font-size: 1.3em;
+		color: #f0f0f0;
+		margin-top: 3em;
+	}
+	
+	#work .button {
+		background: #62fa6a;
+		color: #000;
+		border-radius: 2em;
+		padding: 0.9em 2em;
+		text-transform: uppercase;
+		font-weight: 600;
+		box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+		transition: background 0.3s ease, transform 0.2s ease;
+	}
+	
+	#work .button:hover {
+		background: #92fa98;
+		transform: scale(1.05);
+	}
+	
+	
 
 			.box.style1 h3 {
 				margin-bottom: 0.5em;
 			}
 
-		.box.style2 h3 {
-			margin-bottom: 0.25em;
-		}
-
-		.box.style2 .image {
-			position: relative;
-			left: 2em;
-			top: 2em;
-			margin: -4em 0 4em -4em;
-			width: auto;
-		}
+			#portfolio {
+				padding: 6em 0;
+				background: linear-gradient(135deg, #1c1c1c, #2e2e2e, #8ad2fc);
+				color: #fdfdfd;
+				box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+				
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#portfolio::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.06), transparent 60%);
+				pointer-events: none;
+				z-index: 0;
+			}
+			
+			/* Bring all content to front */
+			#portfolio .container,
+			#portfolio .row,
+			#portfolio .box.style2 {
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* Header Styling */
+			#portfolio header {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			#portfolio header h2 {
+				font-size: 3.5em;
+				font-weight: 700;
+				color: #8ad2fc;
+				background: linear-gradient(90deg, #8ad2fc, #ffcc00, #ffe28a);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			
+			#portfolio header p {
+				font-size: 1.25em;
+				color: #e6e0db;
+			}
+			
+			/* Box Styling */
+			.box.style2 {
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 1.5em;
+				padding: 2em;
+				text-align: center;
+				transition: all 0.3s ease;
+				box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+				max-width: 32em;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			
+			.box.style2:hover {
+				transform: scale(1.03);
+				box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.35);
+			}
+			
+			.box.style2 .image.featured {
+				display: block;
+				border-radius: 1em;
+				overflow: hidden;
+				margin: 0 auto 1.5em auto;
+				transition: transform 0.3s ease;
+			}
+			
+			.box.style2 .image.featured img {
+				width: 100%;
+				height: 310px;
+				object-fit: cover;
+				border-radius: 1em;
+			}
+			
+			.box.style2:hover .image.featured img {
+				transform: scale(1.05);
+			}
+			
+			.box.style2 h3 {
+				margin-bottom: 0.5em;
+				font-size: 1.5em;
+				font-weight: 600;
+				color: #8ad2fc;
+			}
+			
+			.box.style2 p {
+				font-size: 1em;
+				color: #e6e6e6;
+			}
+			
+			.box.style2 a {
+				color: #8ad2fc;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			
+			.box.style2 a:hover {
+				text-decoration: underline;
+			}
+			
+			#portfolio footer {
+				margin-top: 3em;
+				text-align: center;
+			}
+			
+			#portfolio footer .button {
+				background: #8ad2fc;
+				color: #1c1c1c;
+				border-radius: 999px;
+				padding: 0.9rem 2rem;
+				font-weight: bold;
+				transition: background 0.3s ease;
+			}
+			
+			#portfolio footer .button:hover {
+				background: rgb(70, 227, 255);
+				transform: scale(1.05);
+			}
+			
 
 /* Icons */
 
@@ -2109,31 +2325,51 @@ input, select, textarea {
 	#top {
 		padding: 10em 0 10em 0;
 		text-align: left;
+		background: linear-gradient(135deg, #1c1c1c, #2e2e2e, #f3dc5a);
+		color: #fdfdfd;
+		box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+		
 	}
+	
+	#top .image {
+		border-radius: 100%;
+		width: 20em;
+		height: 20em;
+		margin: 0;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+	}
+	
+	#top .image img {
+		border-radius: 100%;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#top h1 {
+		margin-top: 0.35em;
+		font-size: 2.75em;
+		font-weight: 700;
+		color: #d4af37; /* Elegant gold */
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+	}
+	
+	#top p {
+		font-size: 1.5em;
+		line-height: 1.75em;
+		color: #e6e0db;
+	}
+	
+	#top p a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	
 
-		#top .image {
-			border-radius: 100%;
-			width: 20em;
-			height: 20em;
-			margin: 0;
-		}
-
-			#top .image img {
-				border-radius: 100%;
-			}
-
-		#top h1 {
-			margin-top: 0.35em;
-		}
-
-		#top p {
-			font-size: 1.5em;
-			line-height: 1.75em;
-		}
-
-			#top p a {
-				color: inherit;
-			}
+	
+	
 
 	#contact footer {
 		font-size: 0.9em;
